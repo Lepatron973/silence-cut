@@ -46,7 +46,8 @@ export default function Dashboard() {
 
     const handleFileSelection = (file: File) => {
         // Validate file type
-        if (file.type !== 'video/mp4') {
+
+        if (file.type !== 'video/mp4' && file.type !== 'video/quicktime') {
             showError('Format de fichier invalide. Veuillez sélectionner un fichier MP4.');
             return;
         }
@@ -320,7 +321,7 @@ export default function Dashboard() {
                                             <input
                                                 type="file"
                                                 ref={fileInputRef}
-                                                accept="video/mp4"
+                                                accept="video/mp4, video/quicktime"
                                                 className="hidden"
                                                 onChange={handleFileInputChange}
                                             />
