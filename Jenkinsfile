@@ -63,7 +63,7 @@ pipeline {
 
 
 
-            echo "Switched traffic to ${next}"
+            echo "Switched traffic to ${next} ok"
           }
         }
       }
