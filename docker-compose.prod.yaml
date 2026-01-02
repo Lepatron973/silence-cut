@@ -7,7 +7,7 @@ services:
       - web
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.silencecut.rule=Host(`silencecut.com`)"
+      - "traefik.http.routers.silencecut.rule=Host(`silencecut.webalead.com`)"
       - "traefik.http.routers.silencecut.entrypoints=websecure"
       - "traefik.http.routers.silencecut.tls=true"
       - "traefik.http.routers.silencecut.tls.certresolver=letsencrypt"
@@ -21,6 +21,7 @@ services:
       - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL:-http://localhost:3000}
       - NEXT_PUBLIC_EMAIL=silencecut.pro@gmail.fr
       - NEXT_PUBLIC_APP_URL=${NEXT_PUBLIC_APP_URL:-http://localhost:3000}
+      - API_URL=https://yanacode.fr/silencecutapi
     
 networks:
   web:
